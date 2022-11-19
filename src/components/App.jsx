@@ -14,26 +14,26 @@ import{Container} from './App.styled'
 
 
     const handelClick = event => {
-       switch ({good, neutral, bad}) {
-          case 'good':
-             setGood(good + 1);
-             break;
-          case 'neutral':
-             setNeutral(neutral + 1);
-             break;
-          case 'bad':
-             setBad(bad + 1);
-             break;
-          default:
-             return;
-       }
-   //  if (event === 'Good') {
-   //    setGood(good + 1);
-   //  } else if (event === 'Neutral') {
-   //    setNeutral(neutral + 1);
-   //  } else if (event === 'Bad') {
-   //    setBad(bad + 1);
-   //  }
+      //  switch ({good, neutral, bad}) {
+      //     case 'good':
+      //        setGood(good + 1);
+      //        break;
+      //     case 'neutral':
+      //        setNeutral(neutral + 1);
+      //        break;
+      //     case 'bad':
+      //        setBad(bad + 1);
+      //        break;
+      //     default:
+      //        return;
+      //  }
+    if (event === 'Good') {
+      setGood(good + 1);
+    } else if (event === 'Neutral') {
+      setNeutral(neutral + 1);
+    } else if (event === 'Bad') {
+      setBad(bad + 1);
+    }
     };
     
      const countTotalFeedback = () => {
@@ -45,7 +45,8 @@ import{Container} from './App.styled'
      if (countTotalFeedback === 0) {
         return 0;
      }
-     return Math.round((good / countTotalFeedback) * 100);
+     else
+     return Math.round((good / countTotalFeedback()) * 100);
    };
    
    
